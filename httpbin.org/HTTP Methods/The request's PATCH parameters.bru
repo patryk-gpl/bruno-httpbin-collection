@@ -1,0 +1,19 @@
+meta {
+  name: The request's PATCH parameters
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{url}}/patch
+  body: none
+  auth: inherit
+}
+
+headers {
+  accept: application/json
+}
+
+settings {
+  encodeUrl: false
+}

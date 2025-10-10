@@ -1,0 +1,19 @@
+meta {
+  name: The request's query parameters
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{url}}/get
+  body: none
+  auth: inherit
+}
+
+headers {
+  accept: application/json
+}
+
+settings {
+  encodeUrl: false
+}

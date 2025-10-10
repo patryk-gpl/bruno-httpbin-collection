@@ -1,0 +1,19 @@
+meta {
+  name: The request's PUT parameters
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{url}}/put
+  body: none
+  auth: inherit
+}
+
+headers {
+  accept: application/json
+}
+
+settings {
+  encodeUrl: false
+}

@@ -1,0 +1,19 @@
+meta {
+  name: The request's DELETE parameters
+  type: http
+  seq: 1
+}
+
+delete {
+  url: {{url}}/delete
+  body: none
+  auth: inherit
+}
+
+headers {
+  accept: application/json
+}
+
+settings {
+  encodeUrl: false
+}

@@ -1,0 +1,19 @@
+meta {
+  name:  The request's POST parameters
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{url}}/post
+  body: none
+  auth: inherit
+}
+
+headers {
+  accept: application/json
+}
+
+settings {
+  encodeUrl: false
+}
