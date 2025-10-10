@@ -1,0 +1,29 @@
+meta {
+  name: HTTP Basic Auth
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{url}}/basic-auth/:user/:password
+  body: none
+  auth: basic
+}
+
+params:path {
+  password: fakepassword
+  user: test
+}
+
+headers {
+  accept: application/json
+}
+
+auth:basic {
+  username: test
+  password: fakepassword
+}
+
+settings {
+  encodeUrl: false
+}

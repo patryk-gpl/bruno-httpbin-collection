@@ -1,0 +1,30 @@
+meta {
+  name: Digest Auth
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{url}}/digest-auth/:qop/:user/:password
+  body: none
+  auth: digest
+}
+
+params:path {
+  password: fakepassword
+  user: test
+  qop: auth
+}
+
+headers {
+  accept: application/json
+}
+
+auth:digest {
+  username: test
+  password: fakepassword
+}
+
+settings {
+  encodeUrl: false
+}

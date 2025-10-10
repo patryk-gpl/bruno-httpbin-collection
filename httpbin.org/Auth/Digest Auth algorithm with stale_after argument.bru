@@ -1,0 +1,32 @@
+meta {
+  name: Digest Auth algorithm with stale_after argument
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{url}}/digest-auth/:qop/:user/:password/:algorithm/:stale_after
+  body: none
+  auth: digest
+}
+
+params:path {
+  stale_after: never
+  algorithm: MD5
+  password: fakepassword
+  user: test
+  qop: auth
+}
+
+headers {
+  accept: application/json
+}
+
+auth:digest {
+  username: test
+  password: fakepassword
+}
+
+settings {
+  encodeUrl: false
+}

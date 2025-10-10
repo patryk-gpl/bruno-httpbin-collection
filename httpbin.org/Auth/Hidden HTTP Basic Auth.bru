@@ -1,0 +1,28 @@
+meta {
+  name: Hidden HTTP Basic Auth
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{url}}/hidden-basic-auth/:user/:password
+  body: none
+  auth: none
+}
+
+params:path {
+  password: fakepassword
+  user: test
+}
+
+headers {
+  accept: application/json
+}
+
+settings {
+  encodeUrl: false
+}
+
+docs {
+  Returns 404 Not Found unless the request is authenticated.
+}

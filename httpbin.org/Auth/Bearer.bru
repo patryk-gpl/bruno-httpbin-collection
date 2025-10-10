@@ -1,0 +1,23 @@
+meta {
+  name: Bearer
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{url}}/bearer
+  body: none
+  auth: bearer
+}
+
+headers {
+  accept: application/json
+}
+
+auth:bearer {
+  token: faketoken
+}
+
+settings {
+  encodeUrl: false
+}
